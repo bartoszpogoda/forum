@@ -6,8 +6,8 @@ public class Post {
 	private String author;
 	private String content;
 
-	public Post(int threadId) {
-		this.topicId = threadId;
+	public Post(int topicId) {
+		this.topicId = topicId;
 	}
 
 	public Post() {
@@ -71,5 +71,12 @@ public class Post {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "Post [topicId=" + topicId + ", postNumber=" + postNumber + ", author=" + author + ", content=" + content
+				+ "]";
+	}
+
+	
 	
 }

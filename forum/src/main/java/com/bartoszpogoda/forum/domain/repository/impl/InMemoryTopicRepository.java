@@ -14,11 +14,16 @@ public class InMemoryTopicRepository implements TopicRepository {
 	private List<Topic> listOfTopics = new ArrayList<Topic>();
 	
 	public InMemoryTopicRepository(){
-		Topic topicA = new Topic(1);
-		topicA.setTitle("Temat pierwszy");
-		topicA.setAuthorNickname("autor1");
+		Topic topic1 = new Topic(1);
+		topic1.setTitle("Szukam ¿ony");
+		topic1.setAuthorNickname("mietek");
 		
-		listOfTopics.add(topicA);
+		Topic topic2 = new Topic(2);
+		topic2.setTitle("Sprzedam opla");
+		topic2.setAuthorNickname("snipiasty");
+		
+		listOfTopics.add(topic1);
+		listOfTopics.add(topic2);
 	}
 	
 	public List<Topic> findAllTopics() {

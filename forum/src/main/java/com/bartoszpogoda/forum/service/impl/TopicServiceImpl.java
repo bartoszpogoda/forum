@@ -19,4 +19,8 @@ public class TopicServiceImpl implements TopicService {
 		return topicRepository.findAllTopics();
 	}
 
+	public Topic findTopicById(int topicId) {
+		return topicRepository.findTopicById(topicId);
+	}
+
 }

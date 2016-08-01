@@ -14,7 +14,7 @@
 		<div class="jumbotron" style="background-color: #46B5DA;">
 			<div class="container">
 				<h1 style="color: white;">
-					<spring:message code="topics.titleMessage" />
+					${topic.title}
 				</h1>
 
 			</div>
@@ -25,31 +25,26 @@
 		<c:if test="${not empty info}">
 			<div class="alert alert-info">${info}</div>
 		</c:if>
-		<div class="row">
-			
-			<c:forEach items="${topics}" var="topic"> 
-			
-			<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
-				<div class="thumbnail" style="background-color: #ECF7FB;">
-					<div class="caption">
-						<h3>${topic.authorNickname}</h3>
-						
-				        <p>${topic.title}</p>
-						<p>
-							<a href="<spring:url value="/topics/topic/${topic.topicId}" />" class="btn btn-default"><spring:message code="topics.buttonGoIntoTopic" /></a>
-						</p>
-				    
+		<c:forEach items="${posts}" var="post"> 
+			<div class="row">
+				<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
+					<div class="thumbnail" style="background-color: #ECF7FB;">
+						<div class="caption">
+							<h3>${post.author}</h3>
+							
+					        <p>${post.content}</p>
+						</div>
 					</div>
-				</div>
+				</div>	
 			</div>
-			
-			</c:forEach>
-			
-			
-			
+		</c:forEach>
+		<div class="row">
+				<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
+					<div class="thumbnail" style="background-color: #ECF7FB;">
+						input tutaj, zmienic styl tego wyzej
+					</div>
+				</div>	
 		</div>
-
-
 	</section>
 </body>
 </html>
