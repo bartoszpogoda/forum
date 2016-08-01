@@ -50,6 +50,9 @@
 									value="Submit">
 							</fieldset>
 						</form>
+						
+						<a href="<spring:url value="/" />" class="btn btn-default"><spring:message code="login.backToHomePage" /></a>							
+						
 					</div>
 				</div>
 			</div>

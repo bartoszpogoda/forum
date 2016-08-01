@@ -17,8 +17,14 @@ public class InMemoryUserRepository implements UserRepository {
 		fakeUserA.setNickname("mietek123");
 		fakeUserA.setUsername("mietek");
 		fakeUserA.setPassword("haslo");
+		
+		User fakeUserB = new User();
+		fakeUserB.setNickname("heniek");
+		fakeUserB.setUsername("heniek");
+		fakeUserB.setPassword("haslo");
 
 		listOfUser.add(fakeUserA);
+		listOfUser.add(fakeUserB);
 	}
 
 	public User getUserByUsername(String username) {
