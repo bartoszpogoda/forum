@@ -22,29 +22,36 @@
 	</section>
 	<section class="container">
 
-		<c:if test="${not empty info}">
-			<div class="alert alert-info">${info}</div>
-		</c:if>
 		<c:forEach items="${posts}" var="post"> 
-			<div class="row">
-				<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
-					<div class="thumbnail" style="background-color: #ECF7FB;">
-						<div class="caption">
-							<h3>${post.author}</h3>
-							
-					        <p>${post.content}</p>
-						</div>
-					</div>
-				</div>	
-			</div>
-		</c:forEach>
-		<div class="row">
-				<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
-					<div class="thumbnail" style="background-color: #ECF7FB;">
-						input tutaj, zmienic styl tego wyzej
-					</div>
-				</div>	
+		<div class="panel panel-default">
+  <div class="panel-heading">${post.author}</div>
+  <div class="panel-body">
+    ${post.content}
+  		</div>
 		</div>
+		
+		</c:forEach>
+		
+		<c:if test="${not empty sessionScope.loggedUserNickname}">
+		<div class="panel panel-default">
+		  <div class="panel-heading">${sessionScope.loggedUserNickname}</div>
+		  <div class="panel-body">
+		    <form action= "<c:url value="/topics/topic/${topic.topicId}/post" ></c:url>" method="post">
+				<fieldset>
+					<div class="form-group">
+						<input class="form-control" placeholder="Content" 
+							name='content' type="text">
+					</div>
+					</div>
+					<input class="btn btn-lg btn-success btn-block" type="submit"
+						value="Post">
+				</fieldset>
+			<form>
+  		</div>
+  		</div>
+		</c:if>  
+		
+		
 	</section>
 </body>
 </html>

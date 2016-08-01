@@ -62,4 +62,8 @@ public class InMemoryPostRepository implements PostRepository {
 		return allPosts;
 	}
 
+	public List<Post> findAllPosts() {
+		return listOfPosts;
+	}
+
 }

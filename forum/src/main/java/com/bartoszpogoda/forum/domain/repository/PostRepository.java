@@ -8,4 +8,6 @@ public interface PostRepository {
 	public void addPost(Post post);
 	
 	public List<Post> findPostsByTopicIdOrdered(int topicId);
+	
+	public List<Post> findAllPosts();
 }
