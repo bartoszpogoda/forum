@@ -57,6 +57,20 @@
 				</div>
 			</div>
 			
+			<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
+				<div class="thumbnail" style="background-color: #ECF7FB;">
+					<div class="caption">
+						<h3><spring:message code="home.topic.title" /></h3>
+						
+						
+					        <p><spring:message code="home.topic.desc" />${sessionScope.loggedUserNickname}</p>
+							<p>
+								<a href="<spring:url value="/topics" />" class="btn btn-default"><spring:message code="home.topic.button" /></a>
+							</p>
+						   
+					</div>
+				</div>
+			</div>
 			
 		</div>
 

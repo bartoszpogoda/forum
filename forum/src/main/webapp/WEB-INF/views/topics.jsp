@@ -27,6 +27,18 @@
 		</c:if>
 		<div class="row">
 			
+			<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
+				<div class="thumbnail" style="background-color: #66CCFF;">
+					<div class="caption">
+						<h3>Back to home page</h3>
+						<p>
+							<a href="<spring:url value="/" />" class="btn btn-default"><spring:message code="global.backToHomePage" /></a>
+						</p>
+				    
+					</div>
+				</div>
+			</div>
+			
 			<c:forEach items="${topics}" var="topic"> 
 			
 			<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">

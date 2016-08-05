@@ -47,6 +47,8 @@
 						value="Post">
 				</fieldset>
 			<form>
+			
+			<a href="<spring:url value="/topics" />" class="btn btn-default"><spring:message code="topic.backToTopicsButton" /></a>
   		</div>
   		</div>
 		</c:if>  

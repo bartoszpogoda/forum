@@ -51,7 +51,7 @@
 							</fieldset>
 						</form>
 						
-						<a href="<spring:url value="/" />" class="btn btn-default"><spring:message code="login.backToHomePage" /></a>							
+						<a href="<spring:url value="/" />" class="btn btn-default"><spring:message code="global.backToHomePage" /></a>							
 						
 					</div>
 				</div>
